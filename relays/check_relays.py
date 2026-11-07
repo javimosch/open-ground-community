@@ -12,7 +12,8 @@ def probe(e):
         with socket.create_connection((e["host"], int(e["port"])), timeout=4) as s:
             s.settimeout(4)
             s.sendall(b"OGR1 PROBE\n")
-            return s.recv(256).decode(errors="replace").strip() == "PROBE " + e["id"]
+            f = s.recv(256).decode(errors="replace").split()   # "PROBE <id> [used/cap]"
+            return len(f) >= 2 and f[0] == "PROBE" and f[1] == e["id"]
     except (OSError, ValueError, KeyError):
         return False
 
