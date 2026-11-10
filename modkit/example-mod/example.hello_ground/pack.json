@@ -1,0 +1,13 @@
+{
+ "format": "defil-pack",
+ "format_version": 1,
+ "kind": "mod",
+ "id": "example.hello_ground",
+ "name": "Hello Ground",
+ "desc": "The smallest mod: one scenario on an open field, a squad against a squad. Copy this folder, rename it <yourname>.<yourmod>, and change what you like.",
+ "version": "0.1",
+ "requires": {
+  "sim_abi": 120,
+  "packs": []
+ }
+}

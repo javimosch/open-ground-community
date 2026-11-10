@@ -1,0 +1,88 @@
+{
+ "format": "defil-scenario",
+ "version": 1,
+ "name": "Hello Ground",
+ "description": "A squad crosses an open field under fire from a machine-gun section. Your first mod: edit this file.",
+ "seed": 3,
+ "env": {
+  "time": 12.0,
+  "sun": 280,
+  "moon": 0.4
+ },
+ "map": {
+  "width": 200,
+  "height": 90,
+  "generator": "none",
+  "ops": [
+   {
+    "op": "rect",
+    "x": 0,
+    "y": 0,
+    "w": 200,
+    "h": 90,
+    "ground": "grass"
+   },
+   {
+    "op": "line",
+    "from": [
+     60,
+     0
+    ],
+    "to": [
+     60,
+     89
+    ],
+    "width": 4,
+    "ground": "dirt"
+   }
+  ]
+ },
+ "forces": [
+  {
+   "team": "blue",
+   "experience": 80,
+   "squads": [
+    {
+     "name": "Target",
+     "size": 8,
+     "at": [
+      60,
+      45
+     ],
+     "facing": "east",
+     "roe": "fire_at_will",
+     "move_to": [
+      30,
+      45
+     ],
+     "mode": "combat"
+    }
+   ]
+  },
+  {
+   "team": "red",
+   "faction": "militia",
+   "experience": 15,
+   "squads": [
+    {
+     "name": "Gunners",
+     "size": 4,
+     "at": [
+      175,
+      45
+     ],
+     "facing": "west",
+     "mode": "combat",
+     "weapon": "pkm",
+     "move_to": [
+      115,
+      45
+     ]
+    }
+   ]
+  }
+ ],
+ "packs": [
+  "example.hello_ground"
+ ]
+}

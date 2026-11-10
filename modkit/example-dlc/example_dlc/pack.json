@@ -1,0 +1,13 @@
+{
+ "format": "defil-pack",
+ "format_version": 1,
+ "kind": "dlc",
+ "id": "example_dlc",
+ "name": "Example Expansion",
+ "desc": "The smallest expansion: one scenario. An expansion is one folder with a pack.json; unlike a mod it is switched on alone (one at a time) and can brand the main menu. Copy it, rename the folder and the id.",
+ "version": "0.1",
+ "requires": {
+  "sim_abi": 120,
+  "packs": []
+ }
+}
